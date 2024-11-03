@@ -1,0 +1,53 @@
+.pic2{
+    max-width: 300px;  
+}
+    
+content{
+    display: flex;
+    flex-grow: 1;
+}
+.first{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    border: 7px solid yellowgreen;
+}
+
+.second{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    border: 7px solid rgb(255, 174, 0);
+}
+
+.third{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    border: 7px solid rgb(0, 247, 255);
+}
+
+.third>p{
+    max-width: 300px;
+    background: blueviolet;
+    color: black;    
+}
+
+.fourth{
+    display: flex;
+    flex-grow: 1;
+    border: 7px solid rgb(255, 0, 212);
+}
+
+.fourth>table{
+    border: 10px solid black;
+}
+
+.fifth{
+    display: flex;
+    flex-grow: 1;
+    border: 7px solid rgb(184, 70, 250);
+}
+.fifth>span{
+    margin: 5px;
+}

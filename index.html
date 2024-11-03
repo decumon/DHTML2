@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <content>
+        <div class="first">
+            <div class="pic">Тут будет картинка</div>
+            <div><input type="txt" id="text1" value="ссылка на картинку"></div>
+            <div><input type="button" value="кнопочка" id="btn1"></div>
+            <p>Примеры запросов: <br> https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfFf1XoKIG0VnKxZZJh4ENZurERRIJJXIOQ&s <br>pic/1.jpg        
+            </p>
+        </div>
+        <div class="second">
+            <div><input type="txt" id="text2" value="какой-то текст"></div>
+        </div>
+        <div class="third">
+            <div><input type="txt" id="text3" value="введите цвет фона"></div>
+            <div><input type="txt" id="text4" value="введите цвет текста"></div>
+            <div><input type="button" id="btn2" value="жмякни меня"></div>
+            <p id="txt10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore explicabo molestiae tempora! Ipsa repellat excepturi, quidem perferendis unde saepe natus in enim rerum tenetur! Cumque cupiditate minima voluptatum consequatur impedit?
+            Velit voluptate</p>
+        </div>
+        <div class="fourth">
+            <div><input type="txt" id="text5" value="Толщина (в px)"></div>
+            <div><input type="txt" id="text6" value="Цвет"></div>
+            <div><input type="button" id="btn3" value="Применить настройки"></div>
+            <table id="table1">
+                <tbody>
+                    <tr><td>1111</td> <td>1111</td><td>1111</td></tr>
+                    <tr><td>2222</td><td>22222</td><td>22222</td></tr>                    
+                    <tr><td>3333</td><td>3333</td><td>33333</td></tr>                    
+                </tbody>
+            </table>
+        </div>
+        <div class="fifth">
+            <div><input type="txt" id="text7" value=""></div>
+            <div><input type="txt" id="text8" value=""></div>
+            <span id="result">Результат</span>
+            <div><input type="button" id="btn4" value="Посчитать"></div>
+        </div>
+    </content>
+    <script>
+
+        //1
+        document.getElementById("btn1").onclick=function(){
+            document.querySelector(".pic").innerHTML="<img src=\"pic/1.jpg\" alt class=\"pic2\">";
+            document.querySelector(".pic2").src=document.getElementById("text1").value;           //document.getElementById("text1").value
+        }
+
+        document.getElementById("text2").onmouseover=function(){
+            document.getElementById("text2").value="другой текст";
+        }
+
+        //2
+        document.getElementById("text2").onmouseout=function(){
+            document.getElementById("text2").value="какой-то текст";
+        }
+
+        //3
+        document.getElementById("btn2").onclick=function(){
+            document.getElementById("txt10").style.color=document.getElementById("text4").value;
+            document.getElementById("txt10").style.background=document.getElementById("text3").value;
+        }
+
+        //4
+        document.getElementById("btn3").onclick=function(){
+            document.getElementById("table1").style.border="10px solid green";
+            document.getElementById("table1").style.border=document.getElementById("text5").value+"px solid "+document.getElementById("text6").value;
+            //document.getElementById("table1").style.;
+        }
+
+        //5
+        document.getElementById("btn4").onclick=function(){
+            document.getElementById("result").textContent=parseInt(document.getElementById("text7").value)+parseInt(document.getElementById("text8").value);
+        }
+    </script>
+</body>
+</html>
